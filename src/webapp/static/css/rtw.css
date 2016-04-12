@@ -1,0 +1,298 @@
+/*
+Name: Read the Web
+Date: August 2010
+Description: Simple HTML5 layout for the RTW project
+Version: 1.0
+Author: Burr Settles
+Author URI: http://burrsettles.com
+*/
+
+/* imports */
+/*@import url("reset.css");*/
+
+/* body */
+body {
+	background: #FFF;
+	color: #003333;
+	font-size: 13px; /* Base font size: 14px */
+	font-family: 'lucida grande', helvetica, arial, sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	padding-bottom:15px;
+	text-align: left;
+}
+
+/* headings */
+h1 {font-size: 1em}
+h2 {font-size: 1.5em}	/* 22px */
+h3 {font-size: 1.4em}	/* 20px */
+h4 {font-size: 1.3em}	/* 18px */
+h5 {font-size: 1.2em}	/* 16px */
+h6 {font-size: 1em}		/* 14px */
+
+h2, h3, h4, h6 {
+	font-weight: 400;
+	line-height: 1.1;
+	margin-bottom: .8em;
+	color: #990000;
+}
+h5 {
+    font-weight: 400;
+	line-height: 1.1;
+	margin-bottom: .8em;
+    padding:0px;
+    color: #000000;
+}
+
+/* anchors */
+a {outline: 0;}
+a img {border: 0px; text-decoration: none;}
+a:link, a:visited {
+	color: #990000;
+	text-decoration: underline;
+}
+a:hover, a:active {
+	color: #0086B3;
+	text-decoration: none;
+}
+
+/* paragraphs */
+p {margin-bottom: 1.1em; text-align:justify;}
+* p:last-child {margin-bottom: 0;}
+
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+
+::-moz-selection {background: #F6CF74; color: #fff;}
+::selection {background: #F6CF74; color: #fff;}
+
+/* lists */
+ul {
+	list-style: outside disc;
+	margin: 1em 0 1.5em 1.5em;
+}
+ol {
+	list-style: outside decimal;
+	margin: 1em 0 1.5em 1.5em;
+}
+dl {margin: 0 0 1.5em 0;}
+dt {font-weight: bold;}
+dd {margin-left: 1.5em;}
+
+/* tables */
+table {margin: .5em 0 1.5em 0; }
+
+.team td { padding: 0 1em .5em 0; margin:0; vertical-align:top; }
+.team img { border: 1px solid #999; }
+.mug { width:50px; height:50px; }
+
+/**************************
+HTML5 tags */
+
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
+/**************************
+layout */
+
+.body {clear: both; margin: 0 auto; width: 800px;}
+img.right figure.right {float: right; margin: 0 0 2em 2em;}
+img.left, figure.left {float: right; margin: 0 0 2em 2em;}
+
+ul li {
+	margin-bottom:.5em; 
+	list-style-type: none;
+	display: inline;	
+}
+ul.squished li {margin-bottom:0;}
+.abs {font-size:85%; color:#339900; margin:1em 3em; }
+.bib {font-size:85%; color:#999900; margin:1em 3em; }
+.subtitle { color:#999; margin:0em 1em; font-style: italic;}
+
+/**************************
+header + banner */
+
+#banner {
+	margin: 0 auto;
+	padding: 2.5em 0 0 0;
+}
+
+#banner h1 {font-size: 3.571em; line-height: .6;}
+#banner h1 a:link, #banner h1 a:visited {
+	color: #003333;
+	display: block;
+	font-weight: bold;
+	margin: 0 0 .6em .2em;
+	text-decoration: none;
+	width: 470px;
+}
+#banner h1 a:hover, #banner h1 a:active {
+	background: none;
+	color: #990000;
+	text-shadow: none;
+}
+
+#banner h1 strong {font-size: 0.36em; font-weight: normal;}
+
+/**************************
+main nav */
+
+#banner nav {
+	background: #400040;
+	font-size: 1.2em;
+	height: 40px;
+	line-height: 30px;
+	margin: 0 auto 1.5em auto;
+	padding: 0;
+	text-align: center;
+	width: 800px;
+
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#banner nav ul {
+	list-style: none; 
+	margin: 0 auto; 
+	width: 800px;
+	text-align: center;
+	display: inline;
+}
+#banner nav li {
+	display: inline; 
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+#banner nav a:link, #banner nav a:visited {
+	color: #fff;
+	display: inline-block;
+	height: 30px;
+	padding: 5px 1.5em;
+	text-decoration: none;
+}
+#banner nav a:hover, #banner nav a:active,
+#banner nav .active a:link, #banner nav .active a:visited {
+	background: #0086B3;
+	color: #fff;
+	text-shadow: none !important;
+}
+
+#banner nav li a {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
+
+figure {
+	border: none;
+	float: right;
+	margin: 0 0 0.5em 2em;
+}
+
+/**************************
+body */
+
+#footer, #recent {
+	background: #fff;
+	margin-bottom: 1.5em;
+	overflow: hidden;
+	padding: 20px 20px;
+	width: 760px;
+
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#content {
+	background: #fff;
+	margin-bottom: 1.5em;
+	overflow: hidden;
+	padding: 20px 20px;
+	width: 660px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#QA{
+    background: #fff;
+	margin-bottom: 1.5em;
+	overflow: hidden;
+	padding: 10px 20px 20px 20px;
+	width: 600px;
+
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+em {
+    font-style: normal;
+    color: #800080;
+}
+
+/**************************
+footer */
+
+#contentinfo {padding-bottom: 2em; text-align: right;}
+
+
+a.download-link {
+    display: block;
+    padding: 0.7em 1.2em;
+    background:#900;
+    color:#fff;
+    text-decoration: none;
+	text-align:center;
+
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+a.download-link strong { font-size:16px;}
+a.download-link:hover {
+    background: #0086B3;
+}
+
+#acks {
+	float: right; 
+	margin: 0 0 2em 2em;
+	width: 220px;
+	border-left: 1px #ccc solid;
+	padding: 0 0 0 1.2em;
+}
+
+
+/**************************
+recent */
+
+#recent h1 { font-size: 18px; }
+#recent table { width:100%; margin:10px 0; }
+#recent th.instance, #recent td.instance { text-align:left; }
+#recent th, #recent td { text-align:center; padding:2px;}
+#recent tr:hover { background:#eee; }
+#recent table #first_tr:hover{ background: #0080ff;}
+#recent table #select_tr:hover{ background: #fff;}
+#recent a, #recent a:visited { color: #990000; text-decoration: underline; }
+#recent a:hover { color: #0086B3; text-decoration: none; }
+#recent tr.heading { color: #ffffff; background:#003333; }
+#recent .heading td { padding: 5px 2px; }
+#recent .heading a, #recent .heading a:visited { color:#ffffff; text-decoration:none; }
+#recent .heading a:hover { color:#0086B3; }
+

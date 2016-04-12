@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+#name {
+	font-family: Cursive;
+	font-size: 3.0em;
+	font-weight: bold;
+	color:#00F;
+}
+#thu {
+	font-family: Georgia;
+	font-weight: bold;
+	color:black;
+}
+td.select {
+	margin-top: 0px;
+	outline: none;
+	border: 0px;
+	border-radius: 3px;
+	position: relative;
+}
+
+select {
+	height: 30px;
+	-webkit-appearance: menu;
+	-moz-appearance: menu;
+	appearance: menu;
+	border: 1px solid #BBBBBB;
+	font-size: 15px;
+	padding: 0px 10px;
+	display: inline;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-appearance: border-box;
+	background-color: #FFFFFF;
+	color: #333333;
+	border-radius: 5px;
+	outline:none;
+}

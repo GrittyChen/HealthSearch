@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+{%if result_list%}
+<title>{{result_list.question}}</title>
+{%endif%}
+{%load staticfiles%}
+<link rel="stylesheet" href="{% static 'css/rtw.css' %}" type="text/css"/>
+<link rel="icon" type="image/png" href="{% static 'image/Thu_HS.jpg' %}" sizes="32x32"/>
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'image/Thu_HS.jpg' %}"/>
+<link rel="bookmark" type="image/x-icon" href="{% static 'image/Thu_HS.jpg' %}"/>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$.ajaxSetup({
+    data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+});
+</script>
+</head>
+<body>
+{%if result_list%}
+<section id="QA" class="body">
+<h2>问题:
+<h5>{{q_ch}}</h5>
+</h2>
+<h2>Question:</h2>
+<h5>{{result_list.question}}</h5>
+<h2>Answer:</h2>
+<h5>
+<p>{{result_list.answer}}</p>
+</h5>
+</section>
+{%endif%}
+</body>
+</html>
